@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mood Logger App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <main class="app">
+    <!-- HEADER -->
+    <header>
+      <h1>Mood Tracker</h1>
+      <p>How are you feeling today?</p>
+    </header>
+
+    <!-- ADD BUTTON -->
+    <button id="open-form-btn">
+      + Add Mood
+    </button>
+
+    <!-- FORM (hidden by default later via CSS/JS) -->
+    <div id="form-container" class="hidden">
+
+      <form id="mood-form">
+
+        <!-- MOOD SELECT -->
+        <label>Mood</label>
+        <select id="mood-input" required>
+          <option value="">Select mood</option>
+          <option value="happy">😊 Happy</option>
+          <option value="sad">😔 Sad</option>
+          <option value="angry">😡 Angry</option>
+          <option value="neutral">😐 Neutral</option>
+        </select>
+
+        <!-- DATE -->
+        <label>Date</label>
+        <input type="date" id="date-input" required />
+
+        <!-- NOTE -->
+        <label>Note</label>
+        <textarea id="note-input" rows="4" placeholder="Write something..."></textarea>
+
+        <!-- BUTTONS -->
+        <button type="submit" id="save-btn">Save</button>
+        <button type="button" id="cancel-btn">Cancel</button>
+
+      </form>
+
+    </div>
+
+    <!-- ENTRIES CONTAINER -->
+    <section id="mood-container">
+    <!--HTML will be inserted here by JavaScript-->
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
